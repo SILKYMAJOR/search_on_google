@@ -1,0 +1,51 @@
+-
+  perspective : Directory listing vulnerabilities
+  query: search?q=site:{site}+intitle:index.of
+-
+  perspective : Exposed Configuration files
+  query: search?q=site:{site}+ext:xml+|+ext:conf+|+ext:cnf+|+ext:reg+|+ext:inf+|+ext:rdp+|+ext:cfg+|+ext:txt+|+ext:ora+|+ext:ini
+-
+  perspective : Exposed Database files
+  query: search?q=site:{site}+ext:sql+|+ext:dbf+|+ext:mdb
+-
+  perspective : WordPress Plugins/Uploads/Downloads
+  query: search?q=site:{site}+inurl:wp-+|+inurl:wp-content+|+inurl:plugins+|+inurl:uploads+|+inurl:themes+|+inurl:download
+-
+  perspective : Exposed log files
+  query: search?q=site:{site}+ext:log
+-
+  perspective : Backup and old files
+  query: search?q=site:{site}+ext:bkf+|+ext:bkp+|+ext:bak+|+ext:old+|+ext:backup
+-
+  perspective : Login pages
+  query: search?q=site:{site}+inurl:login
+-
+  perspective : SQL errors
+  query: search?q=site:{site}+intext:"sql+syntax+near"+|+intext:"syntax+error+has+occurred"+|+intext:"incorrect+syntax+near"+|+intext:"unexpected+end+of+SQL+command"+|+intext:"Warning:+mysql_connect()"+|+intext:"Warning:+mysql_query()"+|+intext:"Warning:+pg_connect()"
+-
+  perspective : Publicly exposed documents
+  query: search?q=site:{site}+ext:doc+|+ext:docx+|+ext:odt+|+ext:pdf+|+ext:rtf+|+ext:sxw+|+ext:psw+|+ext:ppt+|+ext:pptx+|+ext:pps+|+ext:csv
+-
+  perspective : phpinfo()
+  query: search?q=site:{site}+ext:php+intitle:phpinfo+"published+by+the+PHP+Group"
+-
+  perspective: Finding Backdoors
+  query: search?q=site:{site}+inurl:shell+|+inurl:backdoor+|+inurl:wso+|+inurl:cmd+|+shadow+|+passwd+|+boot.ini+|+inurl:backdoor
+-
+  perspective : Install / Setup files
+  query: search?q=site:{site}+inurl:readme+|+inurl:license+|+inurl:install+|+inurl:setup+|+inurl:config
+-
+  perspective :  Open Redirects
+  query: search?q=site:{site}+inurl:redir+|+inurl:url+|+inurl:redirect+|+inurl:return+|+inurl:src=http+|+inurl:r=http
+-
+  perspective : Apache STRUTS RCE
+  query: search?q=site:{site}+ext:action+|+ext:struts+|+ext:do
+-
+  perspective : Find Pastebin entries
+  query: search?q=site:pastebin.com+{site}
+-
+  perspective : Employees on LINKEDIN
+  query: search?q=site:linkedin.com+employees+{site}
+-
+  perspective : .htaccess sensitive files
+  query: search?q=site:{site}+inurl:"/phpinfo.php"+|+inurl:".htaccess"+|+inurl:"/.git"+{site}%20-github
